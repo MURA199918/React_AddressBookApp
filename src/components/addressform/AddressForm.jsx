@@ -109,17 +109,6 @@ export default class AddressBook extends React.Component{
             </div>
             <div className="row-content">
               <div className="row-33">
-                <label className="label drop" htmlFor="state">State</label>
-                <select id="state" name="state" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
-                        <option value="">Select State</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="TamilNadu">TamilNadu</option>
-                        <option value="Karnataka">Karnataka</option>
-                </select>
-              </div>
-              <div className="row-33">
                 <label className="label drop" htmlFor="city">City</label>
                 <select id="city" name="city" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
                         <option value="">Select City</option>
@@ -129,6 +118,17 @@ export default class AddressBook extends React.Component{
                         <option value="Chennai">Chennai</option>
                         <option value="Mumbai">Mumbai</option>
                         <option value="Bangalore">Bangalore</option>
+                </select>
+              </div>
+              <div className="row-33">
+                <label className="label drop" htmlFor="state">State</label>
+                <select id="state" name="state" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Karnataka">Karnataka</option>
                 </select>
               </div>
               <div className="row-33">
