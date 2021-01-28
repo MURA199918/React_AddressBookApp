@@ -1,25 +1,25 @@
-import AxiosService from './AxioService';
+import AxioService from "./AxioService";
 
-const service = new AxiosService();
-export default class AddressBookService {
+const service = new AxioService();
 
-    contactRegistration(requestData) {
-        return service.Post('/create', requestData);
+export default class AddressBookServices {
+    addressRegistration(requestData) {
+        return service.Post('/create', requestData)
     }
 
-    getAllContactData() {
+    getAllAddressess() {
         return service.Get('/');
     }
 
-    deleteContactData(data) {
-        return service.Delete('/delete/' + data);
+    deleteAddress(data) {
+        return service.Delete('/delete/' + data)
     }
 
-    updateContactData(id, requestData) {
-        return service.Put('/update/' + id, requestData);
+    updateAddress(id, data) {
+        return service.Put('/update/' + id, data);
     }
 
-    getContactById(id) {
+    getAddressById(id) {
         return service.Get('/get/' + id);
     }
 }

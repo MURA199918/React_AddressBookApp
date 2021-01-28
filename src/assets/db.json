@@ -1,0 +1,13 @@
+{
+    "AddressBook": [
+      {
+        "id": 1,
+        "_name": "Murali",
+        "_phoneNumber": "91 9894118421",
+        "_address": "private colony",
+        "_city": "Bangalore",
+        "_state": "Karnataka",
+        "zipCode": 620019
+      }
+    ]
+  }

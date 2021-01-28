@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { baseUrl } from '../config/config';
 
-export default class AxioService {
-    api = axios.create({ url: baseUrl });
-
+export default class AxiosServices {
+    
     Post(url, data) {
         return axios.post(baseUrl+url, data, {
             headers: {
