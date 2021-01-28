@@ -25,6 +25,17 @@ export default class AddressBook extends React.Component{
     this.setState({...this.state, [event.target.name]: event.target.value})
   }
 
+  reset = () => {
+    this.setState({firstName: ''})
+    this.setState({lastName: ''})
+    this.setState({phoneNumber: ''})
+    this.setState({email: ''})
+    this.setState({address: ''})
+    this.setState({city: ''})
+    this.setState({state: ''})
+    this.setState({zipCode: ''})
+  }
+
 
   save = (event) => {
     event.preventDefault();

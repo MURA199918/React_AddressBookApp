@@ -43,6 +43,17 @@ export default class Update extends React.Component {
     handleChange = (event) => {
         this.setState({...this.state, [event.target.name]: event.target.value})
       }
+
+      reset = () => {
+        this.setState({firstName: ''})
+        this.setState({lastName: ''})
+        this.setState({phoneNumber: ''})
+        this.setState({email: ''})
+        this.setState({address: ''})
+        this.setState({city: ''})
+        this.setState({state: ''})
+        this.setState({zipCode: ''})
+    }
     
     
       save = (event) => {
@@ -118,14 +129,25 @@ export default class Update extends React.Component {
                 <div className="row-content">
                   <div className="row-33">
                     <label className="label drop" htmlFor="state">State</label>
-                    <select id="state" name="state">
-                      <option value={this.state.state} selected = "selected" style={{width: '100%' }} onChange={this.handleChange} >Select State</option>
+                    <select id="state" name="state" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Karnataka">Karnataka</option>
                     </select>
                   </div>
                   <div className="row-33">
                     <label className="label drop" htmlFor="city">City</label>
-                    <select id="city" name="city">
-                      <option value={this.state.city} selected="selected" style={{width: '100%' }} onChange={this.handleChange} >Select City</option>
+                    <select id="city" name="city" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
+                        <option value="">Select City</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
                     </select>
                   </div>
                   <div className="row-33">
