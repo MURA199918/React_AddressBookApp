@@ -4,6 +4,7 @@ import { baseUrl } from '../config/config';
 export default class AxiosServices {
     
     Post(url, data) {
+        console.log(data,baseUrl)
         return axios.post(baseUrl+url, data, {
             headers: {
                 contentType: 'application/json'
