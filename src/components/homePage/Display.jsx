@@ -50,7 +50,7 @@ export default class Display extends React.Component {
           </tr>
           {
             this.props.addressArray && this.props.addressArray.map((element) => (
-              <tr key={element.contact_id}>
+              <tr key={element.contactId}>
                 <td>{element.firstName}</td>
                 <td>{element.lastName}</td>
                 <td>{element.phone}</td>
@@ -59,9 +59,9 @@ export default class Display extends React.Component {
                 <td>{element.state}</td>
                 <td>{element.email}</td>
                 <td>{element.zip}</td>
-                { <td><img onClick={() => this.deleteAddress(element.addressId)} src={deleteIcon} alt="delete" />
+                { <td><img onClick={() => this.deleteAddress(element.contactId)} src={deleteIcon} alt="delete" />
                     <Link to="Update">
-                      <img onClick={() => this.updateAddress(element.addressId)} src={editIcon} alt="edit" />
+                      <img onClick={() => this.updateAddress(element.contactId)} src={editIcon} alt="edit" />
                     </Link>
                 </td> }
               </tr>

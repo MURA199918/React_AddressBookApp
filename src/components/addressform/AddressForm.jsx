@@ -12,12 +12,12 @@ export default class AddressBook extends React.Component{
     this.state={
       firstName: '',
       lastName: '',
-      phoneNumber: '',
+      phone: '',
       address: '',
       city: '',
       state: '',
       email: '',
-      zipCode: ''
+      zip: ''
     }
   }
 
@@ -28,12 +28,12 @@ export default class AddressBook extends React.Component{
   reset = () => {
     this.setState({firstName: ''})
     this.setState({lastName: ''})
-    this.setState({phoneNumber: ''})
+    this.setState({phone: ''})
     this.setState({email: ''})
     this.setState({address: ''})
     this.setState({city: ''})
     this.setState({state: ''})
-    this.setState({zipCode: ''})
+    this.setState({zip: ''})
   }
 
 
@@ -47,8 +47,8 @@ export default class AddressBook extends React.Component{
       "city": this.state.city,
       "state":this.state.state,
       "email": this.state.email,
-      "phone": this.state.phoneNumber,
-      "zip": this.state.zipCode
+      "phone": this.state.phone,
+      "zip": this.state.zip
     }
 
     console.log(object);
@@ -93,8 +93,8 @@ export default class AddressBook extends React.Component{
             </div>
             <div class="row-content">
               <div className="row-50">
-                <label className="label text" htmlFor="phoneNumber">Phone Number</label>
-                <input className="input" type="text" id="phoneNumber" name="phoneNumber" value={this.state.phoneNumber}  onChange={this.handleChange}  />
+                <label className="label text" htmlFor="phone">Phone Number</label>
+                <input className="input" type="text" id="phone" name="phone" value={this.state.phone}  onChange={this.handleChange}  />
                 <error-output className="phone-error" for="phone"></error-output>
               </div>
               <div className="row-50">
@@ -110,7 +110,7 @@ export default class AddressBook extends React.Component{
             <div className="row-content">
               <div className="row-33">
                 <label className="label drop" htmlFor="city">City</label>
-                <select id="city" name="city" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
+                <select id="city" name="city" selected="selected" style={{width: '100%' }} value={this.state.city} onChange={this.handleChange}>
                         <option value="">Select City</option>
                         <option value="Visakhapatnam">Visakhapatnam</option>
                         <option value="Hyderabad">Hyderabad</option>
@@ -122,7 +122,7 @@ export default class AddressBook extends React.Component{
               </div>
               <div className="row-33">
                 <label className="label drop" htmlFor="state">State</label>
-                <select id="state" name="state" selected="selected" style={{width: '100%' }} onChange={this.handleChange}>
+                <select id="state" name="state" selected="selected" style={{width: '100%' }} value={this.state.state} onChange={this.handleChange}>
                         <option value="">Select State</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                         <option value="Telangana">Telangana</option>
@@ -132,14 +132,14 @@ export default class AddressBook extends React.Component{
                 </select>
               </div>
               <div className="row-33">
-                <label className="label text" htmlFor="zipCode">Zip Code</label>
-                <input className="input" type="text" id="zipCode" name="zipCode" value={this.state.zipCode} onChange={this.handleChange}  />
+                <label className="label text" htmlFor="zip">Zip Code</label>
+                <input className="input" type="text" id="zip" name="zip" value={this.state.zip} onChange={this.handleChange}  />
               </div>
             </div>
             <div className="row-content">
               <div className="button-content">
                 <button type="submit" className="button submitButton" id="submitButton" onClick={this.save}>Submit</button>
-                <button type="reset" className="resetButton button">Reset</button>
+                <button type="reset" className="resetButton button" onClick={this.reset}>Reset</button>
               </div>
             </div>
           </form>
