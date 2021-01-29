@@ -41,8 +41,8 @@ export default class AddressBook extends React.Component{
     event.preventDefault();
 
     let object = {
-      "firstname": this.state.firstName,
-      "last_name": this.state.lastName,
+      "firstName": this.state.firstName,
+      "lastName": this.state.lastName,
       "address": this.state.address,
       "city": this.state.city,
       "state":this.state.state,

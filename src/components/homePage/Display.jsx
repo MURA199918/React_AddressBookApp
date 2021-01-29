@@ -51,8 +51,8 @@ export default class Display extends React.Component {
           {
             this.props.addressArray && this.props.addressArray.map((element) => (
               <tr key={element.contact_id}>
-                <td>{element.firstname}</td>
-                <td>{element.last_name}</td>
+                <td>{element.firstName}</td>
+                <td>{element.lastName}</td>
                 <td>{element.phone}</td>
                 <td>{element.address}</td>
                 <td>{element.city}</td>
